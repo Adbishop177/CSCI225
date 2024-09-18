@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Assignment 2</h1>
+    </head>
+    <body>
+        <iframe width="700" height="394" src="https://www.youtube.com/embed/8JVJ8RGH-3w" title="2023 XFL Championship - Full Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <form action="feedback">
+            First Name: <input type="First" placeholder="Anonymous" name="fname" required>
+            Last Name: <input type="Last" placeholder="Anonymous" name="fname" required>
+            Email Address: <input type="email" name="mail" placeholder="name@domain.com" required>
+            telephone: <input type="Tel" name="homephone" placeholder="(xxx)xxx-xxxx" pattern="\(\d{3}\)\d{3}-\d{4}">
+            <p>Would you recomend this website?</p>
+            <p><input type="radio" name="Decission" value="yes">Yes</p>
+            <p><input type="radio" name="Decission" value="no">No</p>
+            <p>what is your favorite Website</p>
+				<p><input type="Checkbox" name="Website" value="Google">Google</p>
+				<p><input type="checkbox" name="Website" value="Facebook">Facebook</p>
+				<p><input type="checkbox" name="Website" value="Twitter">Twitter</p>
+				<p><input type="checkbox" name="Website" value="Microsoft">Microsoft</p>
+				<p><input type="checkbox" name="Website" value="Time">Time</p>
+                <p>Please rate the website on a scale of 1-10</p>
+                <input type="range" id="rangeInput" name="rangeInput" min="1" max="10">
+                <p>Any additional comments:
+					<textarea name="comment" Rows="1" cols="100" autofocus>Enter Here</textarea>
+				</p>
+                <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
