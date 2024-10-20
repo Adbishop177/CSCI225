@@ -1,30 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <h1>Assignment 2</h1>
-    </head>
-    <body>
-        <iframe width="700" height="394" src="https://www.youtube.com/embed/8JVJ8RGH-3w" title="2023 XFL Championship - Full Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <form action="feedback">
-            First Name: <input type="First" placeholder="Anonymous" name="fname" required>
-            Last Name: <input type="Last" placeholder="Anonymous" name="fname" required>
-            Email Address: <input type="email" name="mail" placeholder="name@domain.com" required>
-            telephone: <input type="Tel" name="homephone" placeholder="(xxx)xxx-xxxx" pattern="\(\d{3}\)\d{3}-\d{4}">
-            <p>Would you recomend this website?</p>
-            <p><input type="radio" name="Decission" value="yes">Yes</p>
-            <p><input type="radio" name="Decission" value="no">No</p>
-            <p>what is your favorite Website</p>
-				<p><input type="Checkbox" name="Website" value="Google">Google</p>
-				<p><input type="checkbox" name="Website" value="Facebook">Facebook</p>
-				<p><input type="checkbox" name="Website" value="Twitter">Twitter</p>
-				<p><input type="checkbox" name="Website" value="Microsoft">Microsoft</p>
-				<p><input type="checkbox" name="Website" value="Time">Time</p>
-                <p>Please rate the website on a scale of 1-10</p>
-                <input type="range" id="rangeInput" name="rangeInput" min="1" max="10">
-                <p>Any additional comments:
-					<textarea name="comment" Rows="1" cols="100" autofocus>Enter Here</textarea>
-				</p>
-                <input type="submit" value="Submit">
-        </form>
-    </body>
+
+<head>
+    <h1 class="d-none">Assignment 2</h1>
+    <!-- Bootstrp framework-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="navbar navbar-expand-lg navbar-light bg-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="https://www.usca.edu/">USCA main page</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#assignment">assignment section</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">contact info</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#schedule">schedule section</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://www.facebook.com">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="d-none">Watch this video:</h1>
+                <iframe class="mt-3 border rounded-3"  width="250" height="300" src="https://www.youtube.com/embed/8JVJ8RGH-3w"
+                    title="2023 XFL Championship - Full Game" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col">
+
+                <form action="feedback">
+                    <div class="form-floating mb-2">
+                        <input class="form-control" type="text" placeholder="Anonymous" id="fname" name="fname"
+                            required>
+                        <label class="form-label" for="fname">First Name:</label>
+                    </div>
+
+                    <div class="form-floating mb-2">
+                        <input class="form-control" type="Last" placeholder="Anonymous" id="lname" name="lname"
+                            required>
+                        <label class="form-label" for="lname">last Name:</label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input class="form-control" type="email" id="mail" name="mail" placeholder="name@domain.com"
+                            required>
+                        <label for="mail">Email</label>
+                    </div>
+
+                    telephone: <input type="Tel" name="homephone" placeholder="(xxx)xxx-xxxx"
+                        pattern="\(\d{3}\)\d{3}-\d{4}">
+
+                    <p>Would you recomend this website?</p>
+                    <div class="form-check">
+                        <input class="form-check-output" type="radio" id="yes" name="yes" value="yes">
+                        <label class="form-check-label" for="yes">Yes</label>
+                        <input class="form-check-output" type="radio" id="no" name="no" value="no">
+                        <label class="form-check-label" for="no">no</label>
+                    </div>
+
+                    <select class="form-select" name="favorite" id="favorite">
+                        <option selected>Select your favorite website</option>
+                        <option value="google">google</option>
+                        <option value="facebook">facebook</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="microsoft">microsoft</option>
+                        <option value="time">time</option>
+                    </select>
+                    <p>Please rate the website on a scale of 1-10</p>
+                    <input type="range" id="rangeInput" name="rangeInput" min="1" max="10">
+                    <p>Any additional comments:
+                        <textarea name="comment" Rows="1" cols="100" autofocus>Enter Here</textarea>
+                    </p>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- Bootstrap framework-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
