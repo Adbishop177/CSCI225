@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>Unit Conversion Calculator-Length</h1>
+</head>
+
+<body>
+    <div class="conversion">
+        <input type="text" name="num" placeholder="Type in a number">
+        <select id="length1">
+            <option> Feet</option>
+            <option>Inches</option>
+            <option>Meter</option>
+            <option>Yards</option>
+        </select>
+        <label>=</label>
+        <label id="con"> </label>
+        <select id="length2">
+            <option> Feet</option>
+            <option>Inches</option>
+            <option>Meter</option>
+            <option>Yards</option>
+        </select>
+        <script>
+            var length1 = document.getElementById('length1');
+            var length2 = document.getElementById('length2');
+            length1.addEventListener('change',conversion,false);
+            length2.addEventListener('change',conversion,false);
+            function conversion(){
+                var length1 = document.getElementById('length1');
+                var length2 = document.getElementById('length2');
+                const num = document.getElementsByName('num')[0];
+                var a = parseFloat(num.value);
+                if (length1.selectedIndex==0){
+                    if (length2.selectedIndex==0){
+                        con = a;
+                    }
+                    else if (length2.selectedIndex==1){
+                        con = a*12;
+                    }
+                    else if (length2.selectedIndex==2){
+                        con = a*0.3048;
+                    }
+                    else{
+                        con = a/3;
+                    }
+                }
+                else if (length1.selectedIndex==1){
+                    if (length2.selectedIndex==0){
+                        con = a/12;
+                    }
+                    else if (length2.selectedIndex==1){
+                        con = a;
+                    }
+                    else if (length2.selectedIndex==2){
+                        con = a* 0.0254;
+                    }
+                    else {
+                        con = a*0.0277778;
+                    }
+                }
+                else if (length1.selectedIndex==2){
+                    if (length2.selectedIndex==0){
+                        con = a*3.28084;
+                    }
+                    else if (length2.selectedIndex==1){
+                        con = a*39.3701;
+                    }
+                    else if (length2.selectedIndex==2){
+                        con = a;
+                    }
+                    else{
+                        con = a*1.09361;
+                    }
+                }
+                else{
+                    if (length2.selectedIndex==0){
+                        con = a*3;
+                    }
+                    else if (length2.selectedIndex==1){
+                        con = a*36;
+                    }
+                    else if (length2.selectedIndex==2){
+                        con = a*0.9144;
+                    }
+                    else{
+                        con = a;
+                    }
+                }
+                document.getElementById("con").innerHTML="the conversion is "+con;
+            }
+        </script>
+    </div>
+</body>
