@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="css/image.css">
+</head>
+<body>
+  <div class="gallery-container">
+    <img src="img/Screenshot 2024-11-18 161339.png" alt="Lion" class="gallery-image active">
+    <img src="img/Screenshot 2024-11-18 165729.png" alt="Tiger" class="gallery-image">
+    <img src="img/Screenshot 2024-11-18 165755.png" alt="Flamingo" class="gallery-image">
+    <img src="img/Screenshot 2024-11-18 165842.png" alt="Image 4" class="gallery-image">
+    <img src="img/Screenshot 2024-11-18 165910.png" alt="Image 5" class="gallery-image">
+    <p class="description">This a image of a lion thats pretty cool</p>
+    <p class="description">This is an image of a cool looking tiger sitting down</p>
+    <p class="description">This is a cool phot of aa flamingo</p>
+    <p class="description">This is a cute photo of three dogs sitting together</p>
+    <p class="description">This is a interesting picture of a hippo bathing</p>
+    <span class="arrow left">&#9664;</span>
+    <span class="arrow right">&#9654;</span>
+    <div class="button-container">
+      <button class="description-button">Description</button>
+    </div>
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.gallery-image');
+    const descriptions = document.querySelectorAll('.description');
+    const leftArrow = document.querySelector('.arrow.left');
+    const rightArrow = document.querySelector('.arrow.right');
+    const descriptionButton = document.querySelector('.description-button');
+    let currentIndex = 0;
+
+    function updateGallery(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+      descriptions.forEach((desc, i) => {
+        desc.classList.remove('active');
+      });
+    }
+
+    descriptionButton.addEventListener('click', () => {
+      descriptions[currentIndex].classList.toggle('active');
+    });
+
+    leftArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateGallery(currentIndex);
+    });
+
+    rightArrow.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateGallery(currentIndex);
+    });
+
+    updateGallery(currentIndex);
+  </script>
+</body>
+</html>
